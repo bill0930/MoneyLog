@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E07212E326173F2A0052AF6B"
-               BuildableName = "MoneySee.app"
-               BlueprintName = "MoneySee"
-               ReferencedContainer = "container:MoneySee.xcodeproj">
+               BuildableName = "MoneyLog.app"
+               BlueprintName = "MoneyLog"
+               ReferencedContainer = "container:MoneyLog.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,9 +45,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E07212E326173F2A0052AF6B"
-            BuildableName = "MoneySee.app"
-            BlueprintName = "MoneySee"
-            ReferencedContainer = "container:MoneySee.xcodeproj">
+            BuildableName = "MoneyLog.app"
+            BlueprintName = "MoneyLog"
+            ReferencedContainer = "container:MoneyLog.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E07212E326173F2A0052AF6B"
-            BuildableName = "MoneySee.app"
-            BlueprintName = "MoneySee"
-            ReferencedContainer = "container:MoneySee.xcodeproj">
+            BuildableName = "MoneyLog.app"
+            BlueprintName = "MoneyLog"
+            ReferencedContainer = "container:MoneyLog.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

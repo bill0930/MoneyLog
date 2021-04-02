@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2D9C5FD35CB773F89229AE80 /* Pods_MoneySee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E87B995950FD1258D6123C38 /* Pods_MoneySee.framework */; };
+		D16C13151BF9324DFE494074 /* Pods_MoneyLog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92E97EFD1A5056DABBFCB476 /* Pods_MoneyLog.framework */; };
 		E07212E826173F2A0052AF6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07212E726173F2A0052AF6B /* AppDelegate.swift */; };
 		E07212EA26173F2A0052AF6B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07212E926173F2A0052AF6B /* SceneDelegate.swift */; };
 		E07212EC26173F2A0052AF6B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07212EB26173F2A0052AF6B /* ViewController.swift */; };
@@ -16,16 +16,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		77AB38E999DB01BA6CD51F24 /* Pods-MoneyLog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneyLog.release.xcconfig"; path = "Target Support Files/Pods-MoneyLog/Pods-MoneyLog.release.xcconfig"; sourceTree = "<group>"; };
+		92E97EFD1A5056DABBFCB476 /* Pods_MoneyLog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoneyLog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB66BA2EAAE7566BCF35ECF3 /* Pods-MoneySee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneySee.release.xcconfig"; path = "Target Support Files/Pods-MoneySee/Pods-MoneySee.release.xcconfig"; sourceTree = "<group>"; };
 		BB333EAEAEFAD3C6E82BE3D8 /* Pods-MoneySee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneySee.debug.xcconfig"; path = "Target Support Files/Pods-MoneySee/Pods-MoneySee.debug.xcconfig"; sourceTree = "<group>"; };
-		E07212E426173F2A0052AF6B /* MoneySee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoneySee.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E07212E426173F2A0052AF6B /* MoneyLog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoneyLog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E07212E726173F2A0052AF6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E07212E926173F2A0052AF6B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E07212EB26173F2A0052AF6B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E07212F026173F340052AF6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E07212F326173F340052AF6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E07212F526173F340052AF6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E87B995950FD1258D6123C38 /* Pods_MoneySee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoneySee.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDA4D9CCBDBB0D2A3B03BE3B /* Pods-MoneyLog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneyLog.debug.xcconfig"; path = "Target Support Files/Pods-MoneyLog/Pods-MoneyLog.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,7 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D9C5FD35CB773F89229AE80 /* Pods_MoneySee.framework in Frameworks */,
+				D16C13151BF9324DFE494074 /* Pods_MoneyLog.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,6 +47,8 @@
 			children = (
 				BB333EAEAEFAD3C6E82BE3D8 /* Pods-MoneySee.debug.xcconfig */,
 				AB66BA2EAAE7566BCF35ECF3 /* Pods-MoneySee.release.xcconfig */,
+				FDA4D9CCBDBB0D2A3B03BE3B /* Pods-MoneyLog.debug.xcconfig */,
+				77AB38E999DB01BA6CD51F24 /* Pods-MoneyLog.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -52,7 +56,7 @@
 		E07212DB26173F2A0052AF6B = {
 			isa = PBXGroup;
 			children = (
-				E07212E626173F2A0052AF6B /* MoneySee */,
+				E07212E626173F2A0052AF6B /* MoneyLog */,
 				E07212E526173F2A0052AF6B /* Products */,
 				81DA837EE253F6B2E19B8065 /* Pods */,
 				F9C0379EE81F295B27E66914 /* Frameworks */,
@@ -62,12 +66,12 @@
 		E07212E526173F2A0052AF6B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E07212E426173F2A0052AF6B /* MoneySee.app */,
+				E07212E426173F2A0052AF6B /* MoneyLog.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E07212E626173F2A0052AF6B /* MoneySee */ = {
+		E07212E626173F2A0052AF6B /* MoneyLog */ = {
 			isa = PBXGroup;
 			children = (
 				E07212E726173F2A0052AF6B /* AppDelegate.swift */,
@@ -77,13 +81,13 @@
 				E07212F226173F340052AF6B /* LaunchScreen.storyboard */,
 				E07212F526173F340052AF6B /* Info.plist */,
 			);
-			path = MoneySee;
+			path = MoneyLog;
 			sourceTree = "<group>";
 		};
 		F9C0379EE81F295B27E66914 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E87B995950FD1258D6123C38 /* Pods_MoneySee.framework */,
+				92E97EFD1A5056DABBFCB476 /* Pods_MoneyLog.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -91,9 +95,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E07212E326173F2A0052AF6B /* MoneySee */ = {
+		E07212E326173F2A0052AF6B /* MoneyLog */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E07212F826173F340052AF6B /* Build configuration list for PBXNativeTarget "MoneySee" */;
+			buildConfigurationList = E07212F826173F340052AF6B /* Build configuration list for PBXNativeTarget "MoneyLog" */;
 			buildPhases = (
 				280B697A8E5273E3C1F10B84 /* [CP] Check Pods Manifest.lock */,
 				E07212E026173F2A0052AF6B /* Sources */,
@@ -105,9 +109,9 @@
 			);
 			dependencies = (
 			);
-			name = MoneySee;
+			name = MoneyLog;
 			productName = MoneySee;
-			productReference = E07212E426173F2A0052AF6B /* MoneySee.app */;
+			productReference = E07212E426173F2A0052AF6B /* MoneyLog.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -124,7 +128,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E07212DF26173F2A0052AF6B /* Build configuration list for PBXProject "MoneySee" */;
+			buildConfigurationList = E07212DF26173F2A0052AF6B /* Build configuration list for PBXProject "MoneyLog" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -137,7 +141,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E07212E326173F2A0052AF6B /* MoneySee */,
+				E07212E326173F2A0052AF6B /* MoneyLog */,
 			);
 		};
 /* End PBXProject section */
@@ -170,7 +174,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MoneySee-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-MoneyLog-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -340,17 +344,17 @@
 		};
 		E07212F926173F340052AF6B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BB333EAEAEFAD3C6E82BE3D8 /* Pods-MoneySee.debug.xcconfig */;
+			baseConfigurationReference = FDA4D9CCBDBB0D2A3B03BE3B /* Pods-MoneyLog.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = MoneySee/Info.plist;
+				INFOPLIST_FILE = MoneyLog/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.billychan.MoneySee;
+				PRODUCT_BUNDLE_IDENTIFIER = com.billychan.MoneyLog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -359,17 +363,17 @@
 		};
 		E07212FA26173F340052AF6B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AB66BA2EAAE7566BCF35ECF3 /* Pods-MoneySee.release.xcconfig */;
+			baseConfigurationReference = 77AB38E999DB01BA6CD51F24 /* Pods-MoneyLog.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = MoneySee/Info.plist;
+				INFOPLIST_FILE = MoneyLog/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.billychan.MoneySee;
+				PRODUCT_BUNDLE_IDENTIFIER = com.billychan.MoneyLog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -379,7 +383,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E07212DF26173F2A0052AF6B /* Build configuration list for PBXProject "MoneySee" */ = {
+		E07212DF26173F2A0052AF6B /* Build configuration list for PBXProject "MoneyLog" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E07212F626173F340052AF6B /* Debug */,
@@ -388,7 +392,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E07212F826173F340052AF6B /* Build configuration list for PBXNativeTarget "MoneySee" */ = {
+		E07212F826173F340052AF6B /* Build configuration list for PBXNativeTarget "MoneyLog" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E07212F926173F340052AF6B /* Debug */,

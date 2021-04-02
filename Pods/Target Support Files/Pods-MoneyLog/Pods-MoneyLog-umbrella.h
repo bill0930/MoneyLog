@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_MoneySeeVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_MoneySeeVersionString[];
+FOUNDATION_EXPORT double Pods_MoneyLogVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_MoneyLogVersionString[];
 
