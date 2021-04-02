@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  MoneySee
+//  MoneyLog
 //
 //  Created by Billy Chan on 2/4/2021.
 //
