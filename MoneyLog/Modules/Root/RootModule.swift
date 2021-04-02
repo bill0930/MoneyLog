@@ -39,7 +39,6 @@ protocol RootViewPresenterInterface: ViewPresenterInterface {
 
 }
 
-
 // MARK: - module builder
 
 final class RootModule: ModuleInterface {
@@ -56,17 +55,17 @@ final class RootModule: ModuleInterface {
         let router = Router()
 
         let viewController = self.assemble(view: view, presenter: presenter, router: router, interactor: interactor)
-        
+
         return viewController
     }
-    
+
     private func assemble(view: RootView, presenter: RootPresenter, router: RootRouter, interactor: RootInteractor) -> UIViewController {
         presenter.interactor = interactor
         presenter.router = router
         router.viewController = view
         interactor.presenter = presenter
         view.presenter = presenter
-        
+
         return view
     }
 

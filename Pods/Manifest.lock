@@ -1,16 +1,24 @@
 PODS:
+  - FontAwesome.swift (1.9.1)
+  - SnapKit (5.0.1)
   - SwiftLint (0.43.1)
 
 DEPENDENCIES:
+  - FontAwesome.swift
+  - SnapKit
   - SwiftLint
 
 SPEC REPOS:
   trunk:
+    - FontAwesome.swift
+    - SnapKit
     - SwiftLint
 
 SPEC CHECKSUMS:
+  FontAwesome.swift: 6b52cb7be66eacd28cbfaa0ca7ffd0de4a186a1d
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SwiftLint: 99f82d07b837b942dd563c668de129a03fc3fb52
 
-PODFILE CHECKSUM: 579f077b6e221bbe180b866a3929864c769592f2
+PODFILE CHECKSUM: 9e78889199ccb220bf8ec20462f17bea83934435
 
 COCOAPODS: 1.10.1
