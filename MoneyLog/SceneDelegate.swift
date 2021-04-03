@@ -19,7 +19,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-        window?.rootViewController = RootModule().build()
+
+        let rootViewController = UINavigationController(rootViewController: LoginModule().build() ?? UIViewController())
+        rootViewController.navigationBar.isHidden = true
+        window?.rootViewController = rootViewController
         window?.makeKeyAndVisible()
 
     }

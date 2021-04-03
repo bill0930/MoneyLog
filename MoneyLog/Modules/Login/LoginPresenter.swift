@@ -1,5 +1,5 @@
 //
-//  RootPresenter.swift
+//  LoginPresenter.swift
 //  MoneyLog
 //
 //  Created by Billy Chan on 2/4/2021.
@@ -8,29 +8,29 @@
 import Foundation
 import UIKit
 
-protocol RootPresenterInterface: PresenterInterface {
-    var router: RootRouterPresenterInterface! { get set }
-    var interactor: RootInteractorPresenterInterface! { get set }
-    var view: RootViewPresenterInterface! { get set }
+protocol LoginPresenterInterface: PresenterInterface {
+    var router: LoginRouterPresenterInterface! { get set }
+    var interactor: LoginInteractorPresenterInterface! { get set }
+    var view: LoginViewPresenterInterface! { get set }
 }
 
-final class RootPresenter: RootPresenterInterface {
+final class LoginPresenter: LoginPresenterInterface {
 
-    var router: RootRouterPresenterInterface!
-    var interactor: RootInteractorPresenterInterface!
-    weak var view: RootViewPresenterInterface!
-
-}
-
-extension RootPresenter: RootPresenterRouterInterface {
+    var router: LoginRouterPresenterInterface!
+    var interactor: LoginInteractorPresenterInterface!
+    weak var view: LoginViewPresenterInterface!
 
 }
 
-extension RootPresenter: RootPresenterInteractorInterface {
+extension LoginPresenter: LoginPresenterRouterInterface {
 
 }
 
-extension RootPresenter: RootPresenterViewInterface {
+extension LoginPresenter: LoginPresenterInteractorInterface {
+
+}
+
+extension LoginPresenter: LoginPresenterViewInterface {
 
     func start() {
         view.setupView()
@@ -53,11 +53,15 @@ extension RootPresenter: RootPresenterViewInterface {
     }
 
     func didClickLoginButton() {
-        interactor.login()
+        interactor.login { (success) in
+            print("login", success)
+        }
     }
 
     func didClickFacebookLoginButton() {
-        interactor.loginWithFacebook()
+        interactor.loginWithFacebook { (success) in
+            print("loginWithFacebook", success)
+        }
     }
 
     func didCLickSignupButton() {

@@ -1,5 +1,5 @@
 //
-//  RootView.swift
+//  LoginView.swift
 //  MoneyLog
 //
 //  Created by Billy Chan on 2/4/2021.
@@ -10,13 +10,13 @@ import UIKit
 import SnapKit
 import FontAwesome_swift
 
-protocol RootViewInterface: ViewInterface {
-    var presenter: RootPresenterViewInterface! {get set}
+protocol LoginViewInterface: ViewInterface {
+    var presenter: LoginPresenterViewInterface! {get set}
 }
 
-final class RootView: UIViewController, RootViewInterface {
+final class LoginView: UIViewController, LoginViewInterface {
 
-    var presenter: RootPresenterViewInterface!
+    var presenter: LoginPresenterViewInterface!
 
     lazy private var container: UIView = {
        let view = UIView()
@@ -180,7 +180,7 @@ final class RootView: UIViewController, RootViewInterface {
 
 }
 
-extension RootView: RootViewPresenterInterface {
+extension LoginView: LoginViewPresenterInterface {
     func setupView() {
         view.addSubview(container)
         container.addSubview(titleLabel)
@@ -290,7 +290,7 @@ extension RootView: RootViewPresenterInterface {
     }
 }
 
-extension RootView: UITextFieldDelegate {
+extension LoginView: UITextFieldDelegate {
     func textFieldDidChangeSelection(_ textField: UITextField) {
         if let username = usernameTextField.text, !username.isEmpty,
            let password = passwordTextField.text, !password.isEmpty {
@@ -307,7 +307,7 @@ extension RootView: UITextFieldDelegate {
     }
 }
 // MARK: onClickHandlers
-extension RootView {
+extension LoginView {
     @objc func onClickEyeButton(_ sender: UIButton) {
         presenter.didClickEyeButton(passwordTextField: passwordTextField, eyeButton: eyeButton)
     }
