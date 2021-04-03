@@ -8,7 +8,13 @@
 import Foundation
 import UIKit
 
-final class RootRouter: RouterInterface {
+protocol RootRouterInterface: RouterInterface {
+    var presenter: RootPresenterRouterInterface! { get set }
+
+    var viewController: UIViewController? { get set }
+}
+
+final class RootRouter: RootRouterInterface {
 
     weak var presenter: RootPresenterRouterInterface!
 

@@ -10,7 +10,11 @@ import UIKit
 import SnapKit
 import FontAwesome_swift
 
-final class RootView: UIViewController, ViewInterface {
+protocol RootViewInterface: ViewInterface {
+    var presenter: RootPresenterViewInterface! {get set}
+}
+
+final class RootView: UIViewController, RootViewInterface {
 
     var presenter: RootPresenterViewInterface!
 
@@ -294,7 +298,6 @@ extension RootView {
 
 extension RootView: UITextFieldDelegate {
     func textFieldDidChangeSelection(_ textField: UITextField) {
-        print("textFieldDidChangeSelection")
         if let username = usernameTextField.text, !username.isEmpty,
            let password = passwordTextField.text, !password.isEmpty {
             loginButton.isEnabled = true

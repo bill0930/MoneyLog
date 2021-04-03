@@ -8,7 +8,13 @@
 import Foundation
 import UIKit
 
-final class RootPresenter: PresenterInterface {
+protocol RootPresenterInterface: PresenterInterface {
+    var router: RootRouterPresenterInterface! { get set }
+    var interactor: RootInteractorPresenterInterface! { get set }
+    var view: RootViewPresenterInterface! { get set }
+}
+
+final class RootPresenter: RootPresenterInterface {
 
     var router: RootRouterPresenterInterface!
     var interactor: RootInteractorPresenterInterface!

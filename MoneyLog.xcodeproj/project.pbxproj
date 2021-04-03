@@ -10,6 +10,8 @@
 		D16C13151BF9324DFE494074 /* Pods_MoneyLog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92E97EFD1A5056DABBFCB476 /* Pods_MoneyLog.framework */; };
 		E067D2F02617A43400F78979 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E067D2EF2617A43400F78979 /* UIColor+Extension.swift */; };
 		E067D2F426188D0B00F78979 /* UIViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E067D2F326188D0B00F78979 /* UIViewController+extension.swift */; };
+		E067D2FF2618C43200F78979 /* RootModuleAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E067D2FE2618C43200F78979 /* RootModuleAssembly.swift */; };
+		E067D30B2618C92900F78979 /* Assembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E067D30A2618C92900F78979 /* Assembler.swift */; };
 		E07212E826173F2A0052AF6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07212E726173F2A0052AF6B /* AppDelegate.swift */; };
 		E07212EA26173F2A0052AF6B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07212E926173F2A0052AF6B /* SceneDelegate.swift */; };
 		E07212EC26173F2A0052AF6B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07212EB26173F2A0052AF6B /* ViewController.swift */; };
@@ -40,6 +42,8 @@
 		BB333EAEAEFAD3C6E82BE3D8 /* Pods-MoneySee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneySee.debug.xcconfig"; path = "Target Support Files/Pods-MoneySee/Pods-MoneySee.debug.xcconfig"; sourceTree = "<group>"; };
 		E067D2EF2617A43400F78979 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		E067D2F326188D0B00F78979 /* UIViewController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extension.swift"; sourceTree = "<group>"; };
+		E067D2FE2618C43200F78979 /* RootModuleAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootModuleAssembly.swift; sourceTree = "<group>"; };
+		E067D30A2618C92900F78979 /* Assembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembler.swift; sourceTree = "<group>"; };
 		E07212E426173F2A0052AF6B /* MoneyLog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoneyLog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E07212E726173F2A0052AF6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E07212E926173F2A0052AF6B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +102,15 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		E067D2FD2618C41F00F78979 /* Containers */ = {
+			isa = PBXGroup;
+			children = (
+				E067D2FE2618C43200F78979 /* RootModuleAssembly.swift */,
+				E067D30A2618C92900F78979 /* Assembler.swift */,
+			);
+			path = Containers;
+			sourceTree = "<group>";
+		};
 		E07212DB26173F2A0052AF6B = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +132,7 @@
 		E07212E626173F2A0052AF6B /* MoneyLog */ = {
 			isa = PBXGroup;
 			children = (
+				E067D2FD2618C41F00F78979 /* Containers */,
 				E067D2EE2617A41F00F78979 /* Extensions */,
 				E0EA9AD82617651C00241EB5 /* Commons */,
 				E0EA9AC82617620300241EB5 /* Modules */,
@@ -156,8 +170,8 @@
 		E0EA9AD82617651C00241EB5 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
-				E0C724B42617751900193C15 /* ViperLink */,
 				E0EA9B0F261771FA00241EB5 /* Viper */,
+				E0C724B42617751900193C15 /* ViperLink */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -333,6 +347,7 @@
 				E0EA9B072617701500241EB5 /* InteractorInterface.swift in Sources */,
 				E0EA9ADA2617653C00241EB5 /* RouterPresenterInterface.swift in Sources */,
 				E0EA9AF4261769DE00241EB5 /* RootPresenter.swift in Sources */,
+				E067D2FF2618C43200F78979 /* RootModuleAssembly.swift in Sources */,
 				E0EA9B0D2617702F00241EB5 /* ViewInterface.swift in Sources */,
 				E0EA9AF0261769DE00241EB5 /* RootModule.swift in Sources */,
 				E0EA9AFB26176A6700241EB5 /* ViewPresenterInterface.swift in Sources */,
@@ -342,6 +357,7 @@
 				E07212EA26173F2A0052AF6B /* SceneDelegate.swift in Sources */,
 				E0EA9AF826176A3500241EB5 /* PresenterViewInterface.swift in Sources */,
 				E0EA9B042617700C00241EB5 /* PresenterInterface.swift in Sources */,
+				E067D30B2618C92900F78979 /* Assembler.swift in Sources */,
 				E0EA9AF3261769DE00241EB5 /* RootView.swift in Sources */,
 				E0EA9AF2261769DE00241EB5 /* RootRouter.swift in Sources */,
 				E0EA9B0A2617702600241EB5 /* RouterInterface.swift in Sources */,

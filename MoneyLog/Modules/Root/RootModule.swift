@@ -6,7 +6,7 @@
 //
 import Foundation
 import UIKit
-
+import Swinject
 // MARK: - router
 
 protocol RootRouterPresenterInterface: RouterPresenterInterface {
@@ -48,30 +48,33 @@ protocol RootViewPresenterInterface: ViewPresenterInterface {
 
 // MARK: - module builder
 
-final class RootModule: ModuleInterface {
+protocol RootModuleInterface: ModuleInterface {
 
-    typealias View = RootView
-    typealias Presenter = RootPresenter
-    typealias Router = RootRouter
-    typealias Interactor = RootInteractor
+}
 
-    func build() -> UIViewController {
-        let view = View()
-        let interactor = Interactor()
-        let presenter = Presenter()
-        let router = Router()
+final class RootModule: RootModuleInterface {
 
-        let viewController = self.assemble(view: view, presenter: presenter, router: router, interactor: interactor)
+    typealias View = RootViewInterface
+    typealias Presenter = RootPresenterInterface
+    typealias Router = RootRouterInterface
+    typealias Interactor = RootInteractorInterface
 
-        return viewController
-    }
+    func build() -> UIViewController? {
+        let assembler = Assembler.shared
 
-    private func assemble(view: RootView, presenter: RootPresenter, router: RootRouter, interactor: RootInteractor) -> UIViewController {
-        presenter.interactor = interactor
-        presenter.router = router
-        router.viewController = view
-        interactor.presenter = presenter
-        view.presenter = presenter
+        let view = assembler.resolver.resolve(View.self) as? RootView
+        let presenter = assembler.resolver.resolve(Presenter.self) as? RootPresenter
+        let router = assembler.resolver.resolve(Router.self) as? RootRouter
+        let interactor = assembler.resolver.resolve(Interactor.self) as? RootInteractor
+        if let view = view, let presenter = presenter, let router = router, let interactor = interactor {
+            presenter.interactor = interactor
+            presenter.router = router
+            router.viewController = view
+            interactor.presenter = presenter
+            view.presenter = presenter
+        } else {
+            return UIViewController()
+        }
 
         return view
     }

@@ -7,7 +7,11 @@
 
 import Foundation
 
-final class RootInteractor: InteractorInterface {
+protocol RootInteractorInterface: InteractorInterface {
+    var presenter: RootPresenterInteractorInterface! { get set }
+}
+
+final class RootInteractor: RootInteractorInterface {
 
     weak var presenter: RootPresenterInteractorInterface!
 }
