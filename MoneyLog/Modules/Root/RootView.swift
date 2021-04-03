@@ -175,21 +175,13 @@ final class RootView: UIViewController, RootViewInterface {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
-        setupView()
-        makeConstraints()
-        hideKeyboardWhenTappedAround()
         self.presenter.start()
     }
 
 }
 
 extension RootView: RootViewPresenterInterface {
-
-}
-
-extension RootView {
-    private func setupView() {
+    func setupView() {
         view.addSubview(container)
         container.addSubview(titleLabel)
         container.addSubview(usernameTextField)
@@ -208,9 +200,11 @@ extension RootView {
         loginButton.isEnabled = false
         loginButton.backgroundColor = UIColor.systemBlue.withAlphaComponent(0.5)
 
+        view.backgroundColor = .white
+        hideKeyboardWhenTappedAround()
     }
 
-    private func makeConstraints() {
+    func makeConstraints() {
         bottomView.snp.makeConstraints {
             $0.bottom.equalToSuperview()
             $0.left.right.equalToSuperview()

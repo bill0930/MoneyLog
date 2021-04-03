@@ -43,7 +43,8 @@ protocol RootInteractorPresenterInterface: InteractorPresenterInterface {
 // MARK: - view
 
 protocol RootViewPresenterInterface: ViewPresenterInterface {
-
+    func setupView()
+    func makeConstraints()
 }
 
 // MARK: - module builder
@@ -69,6 +70,7 @@ final class RootModule: RootModuleInterface {
         if let view = view, let presenter = presenter, let router = router, let interactor = interactor {
             presenter.interactor = interactor
             presenter.router = router
+            presenter.view = view
             router.viewController = view
             interactor.presenter = presenter
             view.presenter = presenter

@@ -33,7 +33,8 @@ extension RootPresenter: RootPresenterInteractorInterface {
 extension RootPresenter: RootPresenterViewInterface {
 
     func start() {
-
+        view.setupView()
+        view.makeConstraints()
     }
 
     func didClickForgetButton() {
