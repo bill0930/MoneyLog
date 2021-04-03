@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D16C13151BF9324DFE494074 /* Pods_MoneyLog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92E97EFD1A5056DABBFCB476 /* Pods_MoneyLog.framework */; };
 		E067D2F02617A43400F78979 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E067D2EF2617A43400F78979 /* UIColor+Extension.swift */; };
+		E067D2F426188D0B00F78979 /* UIViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E067D2F326188D0B00F78979 /* UIViewController+extension.swift */; };
 		E07212E826173F2A0052AF6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07212E726173F2A0052AF6B /* AppDelegate.swift */; };
 		E07212EA26173F2A0052AF6B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07212E926173F2A0052AF6B /* SceneDelegate.swift */; };
 		E07212EC26173F2A0052AF6B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07212EB26173F2A0052AF6B /* ViewController.swift */; };
@@ -38,6 +39,7 @@
 		AB66BA2EAAE7566BCF35ECF3 /* Pods-MoneySee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneySee.release.xcconfig"; path = "Target Support Files/Pods-MoneySee/Pods-MoneySee.release.xcconfig"; sourceTree = "<group>"; };
 		BB333EAEAEFAD3C6E82BE3D8 /* Pods-MoneySee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneySee.debug.xcconfig"; path = "Target Support Files/Pods-MoneySee/Pods-MoneySee.debug.xcconfig"; sourceTree = "<group>"; };
 		E067D2EF2617A43400F78979 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		E067D2F326188D0B00F78979 /* UIViewController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extension.swift"; sourceTree = "<group>"; };
 		E07212E426173F2A0052AF6B /* MoneyLog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoneyLog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E07212E726173F2A0052AF6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E07212E926173F2A0052AF6B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				E067D2EF2617A43400F78979 /* UIColor+Extension.swift */,
+				E067D2F326188D0B00F78979 /* UIViewController+extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 			files = (
 				E07212EC26173F2A0052AF6B /* ViewController.swift in Sources */,
 				E0EA9AE22617656900241EB5 /* PresenterInteractorInterface.swift in Sources */,
+				E067D2F426188D0B00F78979 /* UIViewController+extension.swift in Sources */,
 				E0EA9AFE26176A8800241EB5 /* ModuleInterface.swift in Sources */,
 				E0EA9B072617701500241EB5 /* InteractorInterface.swift in Sources */,
 				E0EA9ADA2617653C00241EB5 /* RouterPresenterInterface.swift in Sources */,

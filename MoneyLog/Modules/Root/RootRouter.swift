@@ -16,5 +16,8 @@ final class RootRouter: RouterInterface {
 }
 
 extension RootRouter: RootRouterPresenterInterface {
+    func routeToForgetPasswordModule() {
+        print("This is RootRouter, i am going to route to forgetPassWordModule")
+    }
 
 }

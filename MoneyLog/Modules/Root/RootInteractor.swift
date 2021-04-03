@@ -13,5 +13,7 @@ final class RootInteractor: InteractorInterface {
 }
 
 extension RootInteractor: RootInteractorPresenterInterface {
-
+    func login() {
+        print("This is Inteactor, i am going to handle the login")
+    }
 }

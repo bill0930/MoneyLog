@@ -10,7 +10,7 @@ import UIKit
 // MARK: - router
 
 protocol RootRouterPresenterInterface: RouterPresenterInterface {
-
+    func routeToForgetPasswordModule()
 }
 
 // MARK: - presenter
@@ -25,12 +25,17 @@ protocol RootPresenterInteractorInterface: PresenterInteractorInterface {
 
 protocol RootPresenterViewInterface: PresenterViewInterface {
     func start()
+    func onClickEyeButton(passwordTextField: UITextField, eyeButton: UIButton)
+    func onClickForgetButton()
+    func onClickLoginButton()
+    func onClickFacebookLoginButton()
+    func onCLickSignupButton()
 }
 
 // MARK: - interactor
 
 protocol RootInteractorPresenterInterface: InteractorPresenterInterface {
-
+    func login()
 }
 
 // MARK: - view

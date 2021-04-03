@@ -71,45 +71,97 @@ final class RootView: UIViewController, ViewInterface {
         button.titleLabel?.font = UIFont.fontAwesome(ofSize: 12, style: .regular)
         button.setTitle(String.fontAwesomeIcon(name: .eyeSlash), for: .normal)
         button.setTitleColor(UIColor(red: 150, green: 150, blue: 150), for: .normal)
-        button.addTarget(self, action: #selector(didEyeButtonClicked), for: .touchUpInside)
+        button.addTarget(self, action: #selector(onClickEyeButton), for: .touchUpInside)
         return button
     }()
 
-    @objc func didEyeButtonClicked(_ sender: UIButton) {
-        passwordTextField.isSecureTextEntry =  !passwordTextField.isSecureTextEntry
-        if passwordTextField.isSecureTextEntry {
-            eyeButton.setTitle(String.fontAwesomeIcon(name: .eyeSlash), for: .normal)
-            eyeButton.setTitleColor(UIColor(red: 150, green: 150, blue: 150), for: .normal)
-        } else {
-            eyeButton.setTitle(String.fontAwesomeIcon(name: .eye), for: .normal)
-            eyeButton.setTitleColor(UIColor(red: 150, green: 150, blue: 150), for: .normal)
-        }
-    }
-
     lazy private var forgetButton: UIButton = {
-        let button = UIButton()
+        let button = UIButton(type: .custom)
+        button.setTitle("Forgetten password?", for: .normal)
+        button.setTitleColor(.systemBlue, for: .normal)
+        button.setTitle("Forgetten password?", for: .highlighted)
+        button.setTitleColor(UIColor.systemBlue.withAlphaComponent(0.5), for: .highlighted)
+        button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 12.0)
+        button.addTarget(self, action: #selector(onClickForgetButton), for: .touchUpInside)
+
         return button
     }()
 
     lazy private var loginButton: UIButton = {
         let button = UIButton()
+        button.setTitle("Log In", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.setTitle("Log In", for: .highlighted)
+        button.setTitleColor(UIColor.white.withAlphaComponent(0.5), for: .highlighted)
+        button.backgroundColor = .systemBlue
+        button.layer.cornerRadius = 4.0
+        button.titleLabel?.font = UIFont(name: "Helvetica Neue Bold", size: 12.0)
+        button.addTarget(self, action: #selector(onClickLoginButton), for: .touchUpInside)
         return button
     }()
 
-    lazy private var dividerView: UIView = {
+    lazy private var orLabel: UILabel = {
+        let label = UILabel()
+        label.text = "OR"
+        label.textColor = .lightGray
+        label.font = UIFont(name: "Helvetica Neue Bold", size: 12.0)
+        return label
+    }()
+
+    lazy private var line1: UIView = {
         let view = UIView()
+        view.backgroundColor = .lightGray
+        return view
+    }()
+
+    lazy private var line2: UIView = {
+        let view = UIView()
+        view.backgroundColor = .lightGray
         return view
     }()
 
     lazy private var facebookLoginButton: UIButton = {
         let button = UIButton()
+        button.setImage(UIImage.fontAwesomeIcon(name: .facebookSquare, style: .brands, textColor: .systemBlue, size: CGSize(width: 20, height: 20)), for: .normal)
+        button.setTitle("Log in with Facebook", for: .normal)
+        button.setTitleColor(.systemBlue, for: .normal)
+        button.setTitleColor(UIColor.systemBlue.withAlphaComponent(0.5), for: .highlighted)
+        button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 12.0)
+        button.addTarget(self, action: #selector(onClickFacebookLoginButton), for: .touchUpInside)
         return button
     }()
 
     lazy private var bottomView: UIView = {
         let view = UIView()
-        view.backgroundColor = .blue
+        view.layer.borderWidth = 1.0
+        view.layer.borderColor = UIColor.lightGray.cgColor
         return view
+    }()
+
+    lazy private var signupStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .horizontal
+        stackView.spacing = 2
+        stackView.alignment = .fill
+        stackView.distribution = .fill
+        return stackView
+    }()
+
+    lazy private var signupLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Don't have an account?"
+        label.textColor = .lightGray
+        label.font = UIFont(name: "Helvetica Neue", size: 12.0)
+        return label
+    }()
+
+    lazy private var signupButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Sign Up", for: .normal)
+        button.setTitleColor(.systemBlue, for: .normal)
+        button.titleLabel?.font = UIFont(name: "Helvetica Neue Bold", size: 12.0)
+        button.addTarget(self, action: #selector(onClickSignUpButton), for: .touchUpInside)
+        return button
     }()
 
     override func viewDidLoad() {
@@ -117,6 +169,7 @@ final class RootView: UIViewController, ViewInterface {
         view.backgroundColor = .white
         setupView()
         makeConstraints()
+        hideKeyboardWhenTappedAround()
         self.presenter.start()
     }
 
@@ -132,6 +185,17 @@ extension RootView {
         view.addSubview(bottomView)
         view.addSubview(usernameTextField)
         view.addSubview(passwordTextField)
+        view.addSubview(forgetButton)
+        view.addSubview(loginButton)
+        view.addSubview(orLabel)
+        view.addSubview(line1)
+        view.addSubview(line2)
+        view.addSubview(facebookLoginButton)
+        view.addSubview(bottomView)
+        bottomView.addSubview(signupStackView)
+        signupStackView.addArrangedSubview(signupLabel)
+        signupStackView.addArrangedSubview(signupButton)
+
     }
 
     private func makeConstraints() {
@@ -139,7 +203,7 @@ extension RootView {
         bottomView.snp.makeConstraints {
             $0.bottom.equalToSuperview()
             $0.left.right.equalToSuperview()
-            $0.height.equalTo(100)
+            $0.height.equalTo(80)
         }
 
         titleLabel.snp.makeConstraints {
@@ -162,11 +226,85 @@ extension RootView {
             $0.right.equalTo(-12)
         }
 
+        forgetButton.snp.makeConstraints {
+            $0.top.equalTo(passwordTextField.snp.bottom).offset(8)
+            $0.right.equalTo(-12)
+            $0.height.equalTo(20)
+        }
+
+        loginButton.snp.makeConstraints {
+            $0.top.equalTo(forgetButton.snp.bottom).offset(8)
+            $0.left.equalTo(12)
+            $0.right.equalTo(-12)
+            $0.height.equalTo(40)
+        }
+
+        orLabel.snp.makeConstraints {
+            $0.top.equalTo(loginButton.snp.bottom).offset(24)
+            $0.centerX.equalToSuperview()
+        }
+
+        line1.snp.makeConstraints {
+            $0.centerY.equalTo(orLabel)
+            $0.left.equalToSuperview().offset(12)
+            $0.height.equalTo(1)
+            $0.right.equalTo(orLabel.snp.left).offset(-12)
+        }
+
+        line2.snp.makeConstraints {
+            $0.centerY.equalTo(orLabel)
+            $0.right.equalToSuperview().offset(-12)
+            $0.height.equalTo(1)
+            $0.left.equalTo(orLabel.snp.right).offset(12)
+        }
+
+        facebookLoginButton.snp.makeConstraints {
+            $0.top.equalTo(orLabel.snp.bottom).offset(24)
+            $0.centerX.equalToSuperview()
+        }
+
+        signupStackView.snp.makeConstraints {
+            $0.center.equalToSuperview()
+        }
+
+        signupLabel.snp.makeConstraints {
+            $0.height.equalTo(20)
+        }
+
+        signupButton.snp.makeConstraints {
+            $0.height.equalTo(20)
+        }
+
     }
 }
 
 extension RootView: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
-        print(String.fontAwesomeIcon(name: .eyeSlash))
+    }
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+    }
+}
+
+extension RootView {
+    @objc func onClickEyeButton(_ sender: UIButton) {
+        presenter.onClickEyeButton(passwordTextField: passwordTextField, eyeButton: eyeButton)
+    }
+
+    @objc func onClickForgetButton(_ sender: UIButton) {
+        presenter.onClickForgetButton()
+    }
+
+    @objc func onClickLoginButton(_ sender: UIButton) {
+        presenter.onClickLoginButton()
+    }
+
+    @objc func onClickFacebookLoginButton(_ sender: UIButton) {
+        presenter.onClickFacebookLoginButton()
+    }
+
+    @objc func onClickSignUpButton(_ sender: UIButton) {
+        presenter.onCLickSignupButton()
     }
 }
