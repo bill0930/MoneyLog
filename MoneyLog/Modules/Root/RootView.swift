@@ -14,10 +14,15 @@ final class RootView: UIViewController, ViewInterface {
 
     var presenter: RootPresenterViewInterface!
 
+    lazy private var container: UIView = {
+       let view = UIView()
+        return view
+    }()
+
     lazy private var titleLabel: UILabel = {
         let label = UILabel()
         label.text = "Instagram"
-        label.font = UIFont(name: "Helvetica Neue Italic", size: 32.0)
+        label.font = UIFont(name: "Helvetica Neue Italic", size: 48.0)
         label.textAlignment = .center
         label.textColor = .black
         return label
@@ -181,59 +186,67 @@ extension RootView: RootViewPresenterInterface {
 
 extension RootView {
     private func setupView() {
-        view.addSubview(titleLabel)
-        view.addSubview(bottomView)
-        view.addSubview(usernameTextField)
-        view.addSubview(passwordTextField)
-        view.addSubview(forgetButton)
-        view.addSubview(loginButton)
-        view.addSubview(orLabel)
-        view.addSubview(line1)
-        view.addSubview(line2)
-        view.addSubview(facebookLoginButton)
+        view.addSubview(container)
+        container.addSubview(titleLabel)
+        container.addSubview(usernameTextField)
+        container.addSubview(passwordTextField)
+        container.addSubview(forgetButton)
+        container.addSubview(loginButton)
+        container.addSubview(orLabel)
+        container.addSubview(line1)
+        container.addSubview(line2)
+        container.addSubview(facebookLoginButton)
         view.addSubview(bottomView)
         bottomView.addSubview(signupStackView)
         signupStackView.addArrangedSubview(signupLabel)
         signupStackView.addArrangedSubview(signupButton)
 
+        loginButton.isEnabled = false
+        loginButton.backgroundColor = UIColor.systemBlue.withAlphaComponent(0.5)
+
     }
 
     private func makeConstraints() {
-
         bottomView.snp.makeConstraints {
             $0.bottom.equalToSuperview()
             $0.left.right.equalToSuperview()
             $0.height.equalTo(80)
         }
 
+        container.snp.makeConstraints {
+            $0.left.right.equalToSuperview()
+            $0.centerY.equalToSuperview()
+            $0.height.equalTo(500)
+        }
+
         titleLabel.snp.makeConstraints {
-            $0.top.equalTo(80)
-            $0.height.equalTo(80)
+            $0.top.equalToSuperview()
+            $0.height.equalTo(100)
             $0.left.right.equalToSuperview()
         }
 
         usernameTextField.snp.makeConstraints {
-            $0.top.equalTo(titleLabel.snp.bottom)
+            $0.top.equalTo(titleLabel.snp.bottom).offset(12)
             $0.height.equalTo(40)
             $0.left.equalTo(12)
             $0.right.equalTo(-12)
         }
 
         passwordTextField.snp.makeConstraints {
-            $0.top.equalTo(usernameTextField.snp.bottom).offset(8)
+            $0.top.equalTo(usernameTextField.snp.bottom).offset(12)
             $0.height.equalTo(40)
             $0.left.equalTo(12)
             $0.right.equalTo(-12)
         }
 
         forgetButton.snp.makeConstraints {
-            $0.top.equalTo(passwordTextField.snp.bottom).offset(8)
+            $0.top.equalTo(passwordTextField.snp.bottom).offset(12)
             $0.right.equalTo(-12)
             $0.height.equalTo(20)
         }
 
         loginButton.snp.makeConstraints {
-            $0.top.equalTo(forgetButton.snp.bottom).offset(8)
+            $0.top.equalTo(forgetButton.snp.bottom).offset(24)
             $0.left.equalTo(12)
             $0.right.equalTo(-12)
             $0.height.equalTo(40)
@@ -259,8 +272,9 @@ extension RootView {
         }
 
         facebookLoginButton.snp.makeConstraints {
-            $0.top.equalTo(orLabel.snp.bottom).offset(24)
             $0.centerX.equalToSuperview()
+            $0.height.equalTo(20)
+            $0.bottom.equalToSuperview().offset(-24)
         }
 
         signupStackView.snp.makeConstraints {
@@ -279,32 +293,41 @@ extension RootView {
 }
 
 extension RootView: UITextFieldDelegate {
-    func textFieldDidEndEditing(_ textField: UITextField) {
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        print("textFieldDidChangeSelection")
+        if let username = usernameTextField.text, !username.isEmpty,
+           let password = passwordTextField.text, !password.isEmpty {
+            loginButton.isEnabled = true
+            loginButton.backgroundColor = UIColor.systemBlue
+        } else {
+            loginButton.isEnabled = false
+            loginButton.backgroundColor = UIColor.systemBlue.withAlphaComponent(0.5)
+        }
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
     }
 }
-
+// MARK: onClickHandlers
 extension RootView {
     @objc func onClickEyeButton(_ sender: UIButton) {
-        presenter.onClickEyeButton(passwordTextField: passwordTextField, eyeButton: eyeButton)
+        presenter.didClickEyeButton(passwordTextField: passwordTextField, eyeButton: eyeButton)
     }
 
     @objc func onClickForgetButton(_ sender: UIButton) {
-        presenter.onClickForgetButton()
+        presenter.didClickForgetButton()
     }
 
     @objc func onClickLoginButton(_ sender: UIButton) {
-        presenter.onClickLoginButton()
+        presenter.didClickLoginButton()
     }
 
     @objc func onClickFacebookLoginButton(_ sender: UIButton) {
-        presenter.onClickFacebookLoginButton()
+        presenter.didClickFacebookLoginButton()
     }
 
     @objc func onClickSignUpButton(_ sender: UIButton) {
-        presenter.onCLickSignupButton()
+        presenter.didCLickSignupButton()
     }
 }

@@ -16,4 +16,12 @@ extension RootInteractor: RootInteractorPresenterInterface {
     func login() {
         print("This is Inteactor, i am going to handle the login")
     }
+
+    func loginWithFacebook() {
+        print("This is Inteactor, i am going to handle the facebook login")
+    }
+
+    func signup() {
+        print("This is Inteactor, i am going to handle the singup")
+    }
 }

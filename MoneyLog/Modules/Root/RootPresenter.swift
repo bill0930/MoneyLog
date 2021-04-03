@@ -30,13 +30,11 @@ extension RootPresenter: RootPresenterViewInterface {
 
     }
 
-    func onClickForgetButton() {
-        print("This is RootPresenter, i am going to call router to help me do sth")
+    func didClickForgetButton() {
         router.routeToForgetPasswordModule()
     }
 
-    func onClickEyeButton(passwordTextField: UITextField, eyeButton: UIButton) {
-        print("This is RootPresenter, i am going to handle onClickEyeButton(passwordTextField: UITextField, eyeButton: UIButton)" )
+    func didClickEyeButton(passwordTextField: UITextField, eyeButton: UIButton) {
         passwordTextField.isSecureTextEntry =  !passwordTextField.isSecureTextEntry
         if passwordTextField.isSecureTextEntry {
             eyeButton.setTitle(String.fontAwesomeIcon(name: .eyeSlash), for: .normal)
@@ -46,17 +44,17 @@ extension RootPresenter: RootPresenterViewInterface {
             eyeButton.setTitleColor(UIColor(red: 150, green: 150, blue: 150), for: .normal)
         }
     }
-    func onClickLoginButton() {
-        print("This is RootPresenter, i am going to handle onClickLoginButton" )
+
+    func didClickLoginButton() {
         interactor.login()
     }
 
-    func onClickFacebookLoginButton() {
-        print("This is RootPresenter, i am going to handle onClickFacebookLoginButton" )
+    func didClickFacebookLoginButton() {
+        interactor.loginWithFacebook()
     }
 
-    func onCLickSignupButton() {
-        print("This is RootPresenter, i am going to handle onCLickSignupButton" )
+    func didCLickSignupButton() {
+        interactor.signup()
     }
 
 }

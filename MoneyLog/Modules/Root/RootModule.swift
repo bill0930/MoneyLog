@@ -25,17 +25,19 @@ protocol RootPresenterInteractorInterface: PresenterInteractorInterface {
 
 protocol RootPresenterViewInterface: PresenterViewInterface {
     func start()
-    func onClickEyeButton(passwordTextField: UITextField, eyeButton: UIButton)
-    func onClickForgetButton()
-    func onClickLoginButton()
-    func onClickFacebookLoginButton()
-    func onCLickSignupButton()
+    func didClickEyeButton(passwordTextField: UITextField, eyeButton: UIButton)
+    func didClickForgetButton()
+    func didClickLoginButton()
+    func didClickFacebookLoginButton()
+    func didCLickSignupButton()
 }
 
 // MARK: - interactor
 
 protocol RootInteractorPresenterInterface: InteractorPresenterInterface {
     func login()
+    func loginWithFacebook()
+    func signup()
 }
 
 // MARK: - view
