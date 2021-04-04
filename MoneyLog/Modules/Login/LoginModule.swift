@@ -9,7 +9,7 @@ import UIKit
 import Swinject
 // MARK: - router
 
-protocol LoginRouterPresenterInterface: LoginrPresenterInterface {
+protocol LoginRouterPresenterInterface: RouterPresenterInterface {
     func routeToForgetPasswordModule()
 }
 

@@ -8,7 +8,6 @@
 import Foundation
 
 protocol LoginInteractorInterface: InteractorInterface {
-    var presenter: LoginPresenterInteractorInterface! { get set }
 }
 
 final class LoginInteractor: LoginInteractorInterface {

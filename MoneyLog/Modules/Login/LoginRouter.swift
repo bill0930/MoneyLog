@@ -9,9 +9,6 @@ import Foundation
 import UIKit
 
 protocol LoginRouterInterface: RouterInterface {
-    var presenter: LoginPresenterRouterInterface! { get set }
-
-    var viewController: UIViewController? { get set }
 }
 
 final class LoginRouter: LoginRouterInterface {
@@ -23,7 +20,7 @@ final class LoginRouter: LoginRouterInterface {
 
 extension LoginRouter: LoginRouterPresenterInterface {
     func routeToForgetPasswordModule() {
-        print("This is LoginRouter, i am going to route to forgetPassWordModule")
+        print("This is LoginRouter, i am going to route to forgetPassWordModule", viewController)
     }
 
 }

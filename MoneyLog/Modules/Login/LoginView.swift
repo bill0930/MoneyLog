@@ -11,7 +11,6 @@ import SnapKit
 import FontAwesome_swift
 
 protocol LoginViewInterface: ViewInterface {
-    var presenter: LoginPresenterViewInterface! {get set}
 }
 
 final class LoginView: UIViewController, LoginViewInterface {

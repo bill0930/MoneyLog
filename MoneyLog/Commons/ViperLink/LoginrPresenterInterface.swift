@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol LoginrPresenterInterface: class {
+protocol RouterPresenterInterface: class {
 
 }

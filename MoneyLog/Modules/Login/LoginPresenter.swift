@@ -9,9 +9,6 @@ import Foundation
 import UIKit
 
 protocol LoginPresenterInterface: PresenterInterface {
-    var router: LoginRouterPresenterInterface! { get set }
-    var interactor: LoginInteractorPresenterInterface! { get set }
-    var view: LoginViewPresenterInterface! { get set }
 }
 
 final class LoginPresenter: LoginPresenterInterface {
