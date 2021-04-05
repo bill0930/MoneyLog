@@ -3,16 +3,36 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		D16C13151BF9324DFE494074 /* Pods_MoneyLog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92E97EFD1A5056DABBFCB476 /* Pods_MoneyLog.framework */; };
+		E067D2F02617A43400F78979 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E067D2EF2617A43400F78979 /* UIColor+Extension.swift */; };
+		E067D2F426188D0B00F78979 /* UIViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E067D2F326188D0B00F78979 /* UIViewController+extension.swift */; };
+		E067D2FF2618C43200F78979 /* LoginModuleAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E067D2FE2618C43200F78979 /* LoginModuleAssembly.swift */; };
+		E067D30B2618C92900F78979 /* Assembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E067D30A2618C92900F78979 /* Assembler.swift */; };
 		E07212E826173F2A0052AF6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07212E726173F2A0052AF6B /* AppDelegate.swift */; };
 		E07212EA26173F2A0052AF6B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07212E926173F2A0052AF6B /* SceneDelegate.swift */; };
 		E07212EC26173F2A0052AF6B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07212EB26173F2A0052AF6B /* ViewController.swift */; };
 		E07212F126173F340052AF6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E07212F026173F340052AF6B /* Assets.xcassets */; };
 		E07212F426173F340052AF6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E07212F226173F340052AF6B /* LaunchScreen.storyboard */; };
+		E0EA9ADA2617653C00241EB5 /* LoginrPresenterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EA9AD92617653C00241EB5 /* LoginrPresenterInterface.swift */; };
+		E0EA9ADE2617655600241EB5 /* PresenterRouterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EA9ADD2617655600241EB5 /* PresenterRouterInterface.swift */; };
+		E0EA9AE22617656900241EB5 /* PresenterInteractorInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EA9AE12617656900241EB5 /* PresenterInteractorInterface.swift */; };
+		E0EA9AE82617659A00241EB5 /* InteractorPresenterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EA9AE72617659A00241EB5 /* InteractorPresenterInterface.swift */; };
+		E0EA9AF0261769DE00241EB5 /* LoginModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EA9AEB261769DE00241EB5 /* LoginModule.swift */; };
+		E0EA9AF1261769DE00241EB5 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EA9AEC261769DE00241EB5 /* LoginInteractor.swift */; };
+		E0EA9AF2261769DE00241EB5 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EA9AED261769DE00241EB5 /* LoginRouter.swift */; };
+		E0EA9AF3261769DE00241EB5 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EA9AEE261769DE00241EB5 /* LoginView.swift */; };
+		E0EA9AF4261769DE00241EB5 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EA9AEF261769DE00241EB5 /* LoginPresenter.swift */; };
+		E0EA9AF826176A3500241EB5 /* PresenterViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EA9AF726176A3500241EB5 /* PresenterViewInterface.swift */; };
+		E0EA9AFB26176A6700241EB5 /* ViewPresenterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EA9AFA26176A6700241EB5 /* ViewPresenterInterface.swift */; };
+		E0EA9AFE26176A8800241EB5 /* ModuleInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EA9AFD26176A8800241EB5 /* ModuleInterface.swift */; };
+		E0EA9B042617700C00241EB5 /* PresenterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EA9B032617700C00241EB5 /* PresenterInterface.swift */; };
+		E0EA9B072617701500241EB5 /* InteractorInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EA9B062617701500241EB5 /* InteractorInterface.swift */; };
+		E0EA9B0A2617702600241EB5 /* RouterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EA9B092617702600241EB5 /* RouterInterface.swift */; };
+		E0EA9B0D2617702F00241EB5 /* ViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EA9B0C2617702F00241EB5 /* ViewInterface.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +40,10 @@
 		92E97EFD1A5056DABBFCB476 /* Pods_MoneyLog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoneyLog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB66BA2EAAE7566BCF35ECF3 /* Pods-MoneySee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneySee.release.xcconfig"; path = "Target Support Files/Pods-MoneySee/Pods-MoneySee.release.xcconfig"; sourceTree = "<group>"; };
 		BB333EAEAEFAD3C6E82BE3D8 /* Pods-MoneySee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneySee.debug.xcconfig"; path = "Target Support Files/Pods-MoneySee/Pods-MoneySee.debug.xcconfig"; sourceTree = "<group>"; };
+		E067D2EF2617A43400F78979 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		E067D2F326188D0B00F78979 /* UIViewController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extension.swift"; sourceTree = "<group>"; };
+		E067D2FE2618C43200F78979 /* LoginModuleAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModuleAssembly.swift; sourceTree = "<group>"; };
+		E067D30A2618C92900F78979 /* Assembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembler.swift; sourceTree = "<group>"; };
 		E07212E426173F2A0052AF6B /* MoneyLog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoneyLog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E07212E726173F2A0052AF6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E07212E926173F2A0052AF6B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -27,6 +51,22 @@
 		E07212F026173F340052AF6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E07212F326173F340052AF6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E07212F526173F340052AF6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0EA9AD92617653C00241EB5 /* LoginrPresenterInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginrPresenterInterface.swift; sourceTree = "<group>"; };
+		E0EA9ADD2617655600241EB5 /* PresenterRouterInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterRouterInterface.swift; sourceTree = "<group>"; };
+		E0EA9AE12617656900241EB5 /* PresenterInteractorInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterInteractorInterface.swift; sourceTree = "<group>"; };
+		E0EA9AE72617659A00241EB5 /* InteractorPresenterInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorPresenterInterface.swift; sourceTree = "<group>"; };
+		E0EA9AEB261769DE00241EB5 /* LoginModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginModule.swift; sourceTree = "<group>"; };
+		E0EA9AEC261769DE00241EB5 /* LoginInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		E0EA9AED261769DE00241EB5 /* LoginRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		E0EA9AEE261769DE00241EB5 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		E0EA9AEF261769DE00241EB5 /* LoginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		E0EA9AF726176A3500241EB5 /* PresenterViewInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterViewInterface.swift; sourceTree = "<group>"; };
+		E0EA9AFA26176A6700241EB5 /* ViewPresenterInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPresenterInterface.swift; sourceTree = "<group>"; };
+		E0EA9AFD26176A8800241EB5 /* ModuleInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleInterface.swift; sourceTree = "<group>"; };
+		E0EA9B032617700C00241EB5 /* PresenterInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterInterface.swift; sourceTree = "<group>"; };
+		E0EA9B062617701500241EB5 /* InteractorInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorInterface.swift; sourceTree = "<group>"; };
+		E0EA9B092617702600241EB5 /* RouterInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterInterface.swift; sourceTree = "<group>"; };
+		E0EA9B0C2617702F00241EB5 /* ViewInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewInterface.swift; sourceTree = "<group>"; };
 		FDA4D9CCBDBB0D2A3B03BE3B /* Pods-MoneyLog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneyLog.debug.xcconfig"; path = "Target Support Files/Pods-MoneyLog/Pods-MoneyLog.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -53,6 +93,24 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		E067D2EE2617A41F00F78979 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E067D2EF2617A43400F78979 /* UIColor+Extension.swift */,
+				E067D2F326188D0B00F78979 /* UIViewController+extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E067D2FD2618C41F00F78979 /* Containers */ = {
+			isa = PBXGroup;
+			children = (
+				E067D2FE2618C43200F78979 /* LoginModuleAssembly.swift */,
+				E067D30A2618C92900F78979 /* Assembler.swift */,
+			);
+			path = Containers;
+			sourceTree = "<group>";
+		};
 		E07212DB26173F2A0052AF6B = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +132,10 @@
 		E07212E626173F2A0052AF6B /* MoneyLog */ = {
 			isa = PBXGroup;
 			children = (
+				E067D2FD2618C41F00F78979 /* Containers */,
+				E067D2EE2617A41F00F78979 /* Extensions */,
+				E0EA9AD82617651C00241EB5 /* Commons */,
+				E0EA9AC82617620300241EB5 /* Modules */,
 				E07212E726173F2A0052AF6B /* AppDelegate.swift */,
 				E07212E926173F2A0052AF6B /* SceneDelegate.swift */,
 				E07212EB26173F2A0052AF6B /* ViewController.swift */,
@@ -82,6 +144,60 @@
 				E07212F526173F340052AF6B /* Info.plist */,
 			);
 			path = MoneyLog;
+			sourceTree = "<group>";
+		};
+		E0C724B42617751900193C15 /* ViperLink */ = {
+			isa = PBXGroup;
+			children = (
+				E0EA9AD92617653C00241EB5 /* LoginrPresenterInterface.swift */,
+				E0EA9ADD2617655600241EB5 /* PresenterRouterInterface.swift */,
+				E0EA9AE12617656900241EB5 /* PresenterInteractorInterface.swift */,
+				E0EA9AE72617659A00241EB5 /* InteractorPresenterInterface.swift */,
+				E0EA9AF726176A3500241EB5 /* PresenterViewInterface.swift */,
+				E0EA9AFA26176A6700241EB5 /* ViewPresenterInterface.swift */,
+			);
+			path = ViperLink;
+			sourceTree = "<group>";
+		};
+		E0EA9AC82617620300241EB5 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				E0EA9AEA261769DE00241EB5 /* Login */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		E0EA9AD82617651C00241EB5 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				E0EA9B0F261771FA00241EB5 /* Viper */,
+				E0C724B42617751900193C15 /* ViperLink */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
+		E0EA9AEA261769DE00241EB5 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				E0EA9AEB261769DE00241EB5 /* LoginModule.swift */,
+				E0EA9AEC261769DE00241EB5 /* LoginInteractor.swift */,
+				E0EA9AED261769DE00241EB5 /* LoginRouter.swift */,
+				E0EA9AEE261769DE00241EB5 /* LoginView.swift */,
+				E0EA9AEF261769DE00241EB5 /* LoginPresenter.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		E0EA9B0F261771FA00241EB5 /* Viper */ = {
+			isa = PBXGroup;
+			children = (
+				E0EA9AFD26176A8800241EB5 /* ModuleInterface.swift */,
+				E0EA9B032617700C00241EB5 /* PresenterInterface.swift */,
+				E0EA9B062617701500241EB5 /* InteractorInterface.swift */,
+				E0EA9B092617702600241EB5 /* RouterInterface.swift */,
+				E0EA9B0C2617702F00241EB5 /* ViewInterface.swift */,
+			);
+			path = Viper;
 			sourceTree = "<group>";
 		};
 		F9C0379EE81F295B27E66914 /* Frameworks */ = {
@@ -104,6 +220,7 @@
 				E07212FC261740B40052AF6B /* Run Script(SwiftLint) */,
 				E07212E126173F2A0052AF6B /* Frameworks */,
 				E07212E226173F2A0052AF6B /* Resources */,
+				0E349A05DBDF844B31835CF3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -159,6 +276,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0E349A05DBDF844B31835CF3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MoneyLog/Pods-MoneyLog-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MoneyLog/Pods-MoneyLog-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MoneyLog/Pods-MoneyLog-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		280B697A8E5273E3C1F10B84 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -197,7 +331,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n \"${PODS_ROOT}/SwiftLint/swiftlint\"\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "if which swiftlint >/dev/null; then\n \"${PODS_ROOT}/SwiftLint/swiftlint\" && \"${PODS_ROOT}/SwiftLint/swiftlint\" autocorrect\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -207,8 +341,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				E07212EC26173F2A0052AF6B /* ViewController.swift in Sources */,
+				E0EA9AE22617656900241EB5 /* PresenterInteractorInterface.swift in Sources */,
+				E067D2F426188D0B00F78979 /* UIViewController+extension.swift in Sources */,
+				E0EA9AFE26176A8800241EB5 /* ModuleInterface.swift in Sources */,
+				E0EA9B072617701500241EB5 /* InteractorInterface.swift in Sources */,
+				E0EA9ADA2617653C00241EB5 /* LoginrPresenterInterface.swift in Sources */,
+				E0EA9AF4261769DE00241EB5 /* LoginPresenter.swift in Sources */,
+				E067D2FF2618C43200F78979 /* LoginModuleAssembly.swift in Sources */,
+				E0EA9B0D2617702F00241EB5 /* ViewInterface.swift in Sources */,
+				E0EA9AF0261769DE00241EB5 /* LoginModule.swift in Sources */,
+				E0EA9AFB26176A6700241EB5 /* ViewPresenterInterface.swift in Sources */,
+				E0EA9AF1261769DE00241EB5 /* LoginInteractor.swift in Sources */,
 				E07212E826173F2A0052AF6B /* AppDelegate.swift in Sources */,
+				E0EA9ADE2617655600241EB5 /* PresenterRouterInterface.swift in Sources */,
 				E07212EA26173F2A0052AF6B /* SceneDelegate.swift in Sources */,
+				E0EA9AF826176A3500241EB5 /* PresenterViewInterface.swift in Sources */,
+				E0EA9B042617700C00241EB5 /* PresenterInterface.swift in Sources */,
+				E067D30B2618C92900F78979 /* Assembler.swift in Sources */,
+				E0EA9AF3261769DE00241EB5 /* LoginView.swift in Sources */,
+				E0EA9AF2261769DE00241EB5 /* LoginRouter.swift in Sources */,
+				E0EA9B0A2617702600241EB5 /* RouterInterface.swift in Sources */,
+				E0EA9AE82617659A00241EB5 /* InteractorPresenterInterface.swift in Sources */,
+				E067D2F02617A43400F78979 /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,5 +7,8 @@ target 'MoneyLog' do
 
   # Pods for MoneyLog
   pod 'SwiftLint'
-
+  pod 'SnapKit'
+  pod 'FontAwesome.swift'
+  pod 'Swinject', '2.7.0'
+  pod 'SwinjectAutoregistration', '2.7.0'
 end
