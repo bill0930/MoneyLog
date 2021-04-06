@@ -37,6 +37,12 @@
 		E0EA9B0D2617702F00241EB5 /* ViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EA9B0C2617702F00241EB5 /* ViewInterface.swift */; };
 		E0F5E307261C70CF00135411 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F5E306261C70CF00135411 /* User.swift */; };
 		E0F5E320261C78EE00135411 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F5E31F261C78EE00135411 /* UserManager.swift */; };
+		E0F5E372261CE99A00135411 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F5E36D261CE99A00135411 /* HomeInteractor.swift */; };
+		E0F5E373261CE99A00135411 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F5E36E261CE99A00135411 /* HomeView.swift */; };
+		E0F5E374261CE99A00135411 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F5E36F261CE99A00135411 /* HomeRouter.swift */; };
+		E0F5E375261CE99A00135411 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F5E370261CE99A00135411 /* HomePresenter.swift */; };
+		E0F5E376261CE99A00135411 /* HomeModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F5E371261CE99A00135411 /* HomeModule.swift */; };
+		E0F5E37A261CEAE100135411 /* HomeModuleAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F5E379261CEAE100135411 /* HomeModuleAssembly.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +81,12 @@
 		E0EA9B0C2617702F00241EB5 /* ViewInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewInterface.swift; sourceTree = "<group>"; };
 		E0F5E306261C70CF00135411 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E0F5E31F261C78EE00135411 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		E0F5E36D261CE99A00135411 /* HomeInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		E0F5E36E261CE99A00135411 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		E0F5E36F261CE99A00135411 /* HomeRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		E0F5E370261CE99A00135411 /* HomePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		E0F5E371261CE99A00135411 /* HomeModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeModule.swift; sourceTree = "<group>"; };
+		E0F5E379261CEAE100135411 /* HomeModuleAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeModuleAssembly.swift; sourceTree = "<group>"; };
 		FDA4D9CCBDBB0D2A3B03BE3B /* Pods-MoneyLog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneyLog.debug.xcconfig"; path = "Target Support Files/Pods-MoneyLog/Pods-MoneyLog.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,8 +125,7 @@
 		E067D2FD2618C41F00F78979 /* Containers */ = {
 			isa = PBXGroup;
 			children = (
-				E067D2FE2618C43200F78979 /* LoginModuleAssembly.swift */,
-				E0A15133261BA44D000B792F /* ServiceAssemby.swift */,
+				E0F5E378261CE9D100135411 /* Assembly */,
 				E067D30A2618C92900F78979 /* MainAssembler.swift */,
 			);
 			path = Containers;
@@ -189,6 +200,7 @@
 		E0EA9AC82617620300241EB5 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				E0F5E36C261CE99A00135411 /* Home */,
 				E0EA9AEA261769DE00241EB5 /* Login */,
 			);
 			path = Modules;
@@ -206,11 +218,12 @@
 		E0EA9AEA261769DE00241EB5 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				E067D2FE2618C43200F78979 /* LoginModuleAssembly.swift */,
 				E0EA9AEB261769DE00241EB5 /* LoginModule.swift */,
-				E0EA9AEC261769DE00241EB5 /* LoginInteractor.swift */,
-				E0EA9AED261769DE00241EB5 /* LoginRouter.swift */,
-				E0EA9AEE261769DE00241EB5 /* LoginView.swift */,
 				E0EA9AEF261769DE00241EB5 /* LoginPresenter.swift */,
+				E0EA9AEC261769DE00241EB5 /* LoginInteractor.swift */,
+				E0EA9AEE261769DE00241EB5 /* LoginView.swift */,
+				E0EA9AED261769DE00241EB5 /* LoginRouter.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -250,6 +263,27 @@
 				E0F5E31F261C78EE00135411 /* UserManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		E0F5E36C261CE99A00135411 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				E0F5E379261CEAE100135411 /* HomeModuleAssembly.swift */,
+				E0F5E371261CE99A00135411 /* HomeModule.swift */,
+				E0F5E370261CE99A00135411 /* HomePresenter.swift */,
+				E0F5E36D261CE99A00135411 /* HomeInteractor.swift */,
+				E0F5E36E261CE99A00135411 /* HomeView.swift */,
+				E0F5E36F261CE99A00135411 /* HomeRouter.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		E0F5E378261CE9D100135411 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				E0A15133261BA44D000B792F /* ServiceAssemby.swift */,
+			);
+			path = Assembly;
 			sourceTree = "<group>";
 		};
 		F9C0379EE81F295B27E66914 /* Frameworks */ = {
@@ -394,11 +428,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0A15134261BA44D000B792F /* ServiceAssemby.swift in Sources */,
+				E0F5E373261CE99A00135411 /* HomeView.swift in Sources */,
 				E0EA9AE22617656900241EB5 /* PresenterInteractorInterface.swift in Sources */,
+				E0F5E375261CE99A00135411 /* HomePresenter.swift in Sources */,
 				E067D2F426188D0B00F78979 /* UIViewController+extension.swift in Sources */,
+				E0F5E374261CE99A00135411 /* HomeRouter.swift in Sources */,
 				E0F5E307261C70CF00135411 /* User.swift in Sources */,
 				E0EA9AFE26176A8800241EB5 /* ModuleInterface.swift in Sources */,
 				E0EA9B072617701500241EB5 /* InteractorInterface.swift in Sources */,
+				E0F5E372261CE99A00135411 /* HomeInteractor.swift in Sources */,
 				E0EA9ADA2617653C00241EB5 /* LoginrPresenterInterface.swift in Sources */,
 				E0EA9AF4261769DE00241EB5 /* LoginPresenter.swift in Sources */,
 				E067D2FF2618C43200F78979 /* LoginModuleAssembly.swift in Sources */,
@@ -411,10 +449,12 @@
 				E0A15130261BA1F4000B792F /* LoginService.swift in Sources */,
 				E07212EA26173F2A0052AF6B /* SceneDelegate.swift in Sources */,
 				E0EA9AF826176A3500241EB5 /* PresenterViewInterface.swift in Sources */,
+				E0F5E37A261CEAE100135411 /* HomeModuleAssembly.swift in Sources */,
 				E0F5E320261C78EE00135411 /* UserManager.swift in Sources */,
 				E0EA9B042617700C00241EB5 /* PresenterInterface.swift in Sources */,
 				E067D30B2618C92900F78979 /* MainAssembler.swift in Sources */,
 				E0EA9AF3261769DE00241EB5 /* LoginView.swift in Sources */,
+				E0F5E376261CE99A00135411 /* HomeModule.swift in Sources */,
 				E0EA9AF2261769DE00241EB5 /* LoginRouter.swift in Sources */,
 				E0EA9B0A2617702600241EB5 /* RouterInterface.swift in Sources */,
 				E0EA9AE82617659A00241EB5 /* InteractorPresenterInterface.swift in Sources */,

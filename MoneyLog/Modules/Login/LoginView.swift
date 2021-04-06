@@ -177,9 +177,6 @@ final class LoginView: UIViewController, LoginViewInterface {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-//        _ = Auth.auth().addStateDidChangeListener { (auth, user) in
-//          // ...
-//        }
         handler = Auth.auth().addStateDidChangeListener { [weak self] (auth, _) in
             if auth.currentUser != nil {
                 self?.presenter.didFindUserLoggedIn()

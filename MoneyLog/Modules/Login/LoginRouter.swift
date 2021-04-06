@@ -25,7 +25,9 @@ extension LoginRouter: LoginRouterPresenterInterface {
 
     func routeToHomeModule() {
         print("This is LoginRouter, i am going to route to homeModule", viewController)
-//        viewController?.navigationController?.pushViewController(UIViewController(), animated: false)
+        if let vc = HomeModule().build() {
+            viewController?.navigationController?.pushViewController(vc, animated: false)
+        }
     }
 
 }

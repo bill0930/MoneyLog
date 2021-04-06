@@ -25,7 +25,7 @@ extension LoginInteractor: LoginInteractorPresenterInterface {
     func login(withEmail email: String, password: String, completion: (Bool) -> Void) {
         loginService.signIn(withEmail: email, password: password) { (user, error) in
             if let user = user {
-                print(user)
+                UserManager.shared.loadUser(user: user)
             } else {
                 print(error?.localizedDescription)
             }

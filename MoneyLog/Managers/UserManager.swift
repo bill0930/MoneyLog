@@ -6,3 +6,23 @@
 //
 
 import Foundation
+import FirebaseAuth
+
+struct UserManager {
+    static var shared = UserManager()
+    var isLogin: Bool = false
+    var email: String = ""
+    var displayName: String = ""
+
+    private init() {}
+
+    func loadUser(user: User) {
+        UserManager.shared.displayName = user.displayName
+        UserManager.shared.email = user.email
+        UserManager.shared.isLogin = user.isLogin
+    }
+
+    func clearUser() {
+        UserManager.shared = UserManager()
+    }
+}
