@@ -8,10 +8,11 @@
 import Foundation
 import Swinject
 
-struct ModuleAssembler {
-    static let shared = ModuleAssembler()
+struct MainAssembler {
+    static let shared = MainAssembler()
 
     let assembler = Assembler([
-        LoginModuleAssembly()
+        LoginModuleAssembly(),
+        ServiceAssembly()
     ])
 }

@@ -11,4 +11,6 @@ target 'MoneyLog' do
   pod 'FontAwesome.swift'
   pod 'Swinject', '2.7.0'
   pod 'SwinjectAutoregistration', '2.7.0'
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Auth'
 end

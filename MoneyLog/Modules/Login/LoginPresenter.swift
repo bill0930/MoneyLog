@@ -30,7 +30,7 @@ extension LoginPresenter: LoginPresenterInteractorInterface {
 extension LoginPresenter: LoginPresenterViewInterface {
 
     func start() {
-        view.setupView()
+        view.setupViews()
         view.makeConstraints()
     }
 
@@ -49,9 +49,9 @@ extension LoginPresenter: LoginPresenterViewInterface {
         }
     }
 
-    func didClickLoginButton() {
-        interactor.login { (success) in
-            print("login", success)
+    func didClickLoginButton(withEmail email: String, password: String) {
+        interactor.login(withEmail: email, password: password) { (isLogin) in
+            print(isLogin)
         }
     }
 
@@ -63,6 +63,10 @@ extension LoginPresenter: LoginPresenterViewInterface {
 
     func didCLickSignupButton() {
         interactor.signup()
+    }
+
+    func didFindUserLoggedIn() {
+        router.routeToHomeModule()
     }
 
 }

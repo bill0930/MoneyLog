@@ -11,6 +11,7 @@ import Swinject
 
 protocol LoginRouterPresenterInterface: RouterPresenterInterface {
     func routeToForgetPasswordModule()
+    func routeToHomeModule()
 }
 
 // MARK: - presenter
@@ -27,15 +28,16 @@ protocol LoginPresenterViewInterface: PresenterViewInterface {
     func start()
     func didClickEyeButton(passwordTextField: UITextField, eyeButton: UIButton)
     func didClickForgetButton()
-    func didClickLoginButton()
+    func didClickLoginButton(withEmail email: String, password: String)
     func didClickFacebookLoginButton()
     func didCLickSignupButton()
+    func didFindUserLoggedIn()
 }
 
 // MARK: - interactor
 
 protocol LoginInteractorPresenterInterface: InteractorPresenterInterface {
-    func login(success: (Bool) -> Void)
+    func login(withEmail email: String, password: String, completion: (Bool) -> Void)
     func loginWithFacebook(success: (Bool) -> Void)
     func signup()
 }
@@ -43,7 +45,7 @@ protocol LoginInteractorPresenterInterface: InteractorPresenterInterface {
 // MARK: - view
 
 protocol LoginViewPresenterInterface: ViewPresenterInterface {
-    func setupView()
+    func setupViews()
     func makeConstraints()
 }
 
@@ -61,7 +63,7 @@ final class LoginModule: LoginModuleInterface {
     typealias Interactor = LoginInteractorInterface
 
     func build() -> UIViewController? {
-        let resolver = ModuleAssembler.shared.assembler.resolver
+        let resolver = MainAssembler.shared.assembler.resolver
 
         let view = resolver.resolve(View.self) as? LoginView
         let presenter = resolver.resolve(Presenter.self) as? LoginPresenter

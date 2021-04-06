@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 import SnapKit
 import FontAwesome_swift
+import FirebaseAuth
 
 protocol LoginViewInterface: ViewInterface {
 }
@@ -16,6 +17,8 @@ protocol LoginViewInterface: ViewInterface {
 final class LoginView: UIViewController, LoginViewInterface {
 
     var presenter: LoginPresenterViewInterface!
+
+    private var handler: AuthStateDidChangeListenerHandle?
 
     lazy private var container: UIView = {
        let view = UIView()
@@ -172,6 +175,22 @@ final class LoginView: UIViewController, LoginViewInterface {
         return button
     }()
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+//        _ = Auth.auth().addStateDidChangeListener { (auth, user) in
+//          // ...
+//        }
+        handler = Auth.auth().addStateDidChangeListener { [weak self] (auth, _) in
+            if auth.currentUser != nil {
+                self?.presenter.didFindUserLoggedIn()
+            }
+        }
+    }
+
+    override func viewDidDisappear(_ animated: Bool) {
+        Auth.auth().removeStateDidChangeListener(handler!)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.presenter.start()
@@ -180,7 +199,7 @@ final class LoginView: UIViewController, LoginViewInterface {
 }
 
 extension LoginView: LoginViewPresenterInterface {
-    func setupView() {
+    func setupViews() {
         view.addSubview(container)
         container.addSubview(titleLabel)
         container.addSubview(usernameTextField)
@@ -316,7 +335,7 @@ extension LoginView {
     }
 
     @objc func onClickLoginButton(_ sender: UIButton) {
-        presenter.didClickLoginButton()
+        presenter.didClickLoginButton(withEmail: usernameTextField.text!, password: passwordTextField.text!)
     }
 
     @objc func onClickFacebookLoginButton(_ sender: UIButton) {

@@ -7,6 +7,8 @@
 
 import UIKit
 import Swinject
+import Firebase
+import FirebaseAuth
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 

@@ -11,12 +11,14 @@
 		E067D2F02617A43400F78979 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E067D2EF2617A43400F78979 /* UIColor+Extension.swift */; };
 		E067D2F426188D0B00F78979 /* UIViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E067D2F326188D0B00F78979 /* UIViewController+extension.swift */; };
 		E067D2FF2618C43200F78979 /* LoginModuleAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E067D2FE2618C43200F78979 /* LoginModuleAssembly.swift */; };
-		E067D30B2618C92900F78979 /* Assembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E067D30A2618C92900F78979 /* Assembler.swift */; };
+		E067D30B2618C92900F78979 /* MainAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E067D30A2618C92900F78979 /* MainAssembler.swift */; };
 		E07212E826173F2A0052AF6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07212E726173F2A0052AF6B /* AppDelegate.swift */; };
 		E07212EA26173F2A0052AF6B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07212E926173F2A0052AF6B /* SceneDelegate.swift */; };
-		E07212EC26173F2A0052AF6B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07212EB26173F2A0052AF6B /* ViewController.swift */; };
 		E07212F126173F340052AF6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E07212F026173F340052AF6B /* Assets.xcassets */; };
 		E07212F426173F340052AF6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E07212F226173F340052AF6B /* LaunchScreen.storyboard */; };
+		E0A15105261B9F4F000B792F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E0A15104261B9F4F000B792F /* GoogleService-Info.plist */; };
+		E0A15130261BA1F4000B792F /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A1512F261BA1F4000B792F /* LoginService.swift */; };
+		E0A15134261BA44D000B792F /* ServiceAssemby.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A15133261BA44D000B792F /* ServiceAssemby.swift */; };
 		E0EA9ADA2617653C00241EB5 /* LoginrPresenterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EA9AD92617653C00241EB5 /* LoginrPresenterInterface.swift */; };
 		E0EA9ADE2617655600241EB5 /* PresenterRouterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EA9ADD2617655600241EB5 /* PresenterRouterInterface.swift */; };
 		E0EA9AE22617656900241EB5 /* PresenterInteractorInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EA9AE12617656900241EB5 /* PresenterInteractorInterface.swift */; };
@@ -33,6 +35,8 @@
 		E0EA9B072617701500241EB5 /* InteractorInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EA9B062617701500241EB5 /* InteractorInterface.swift */; };
 		E0EA9B0A2617702600241EB5 /* RouterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EA9B092617702600241EB5 /* RouterInterface.swift */; };
 		E0EA9B0D2617702F00241EB5 /* ViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EA9B0C2617702F00241EB5 /* ViewInterface.swift */; };
+		E0F5E307261C70CF00135411 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F5E306261C70CF00135411 /* User.swift */; };
+		E0F5E320261C78EE00135411 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F5E31F261C78EE00135411 /* UserManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,14 +47,16 @@
 		E067D2EF2617A43400F78979 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		E067D2F326188D0B00F78979 /* UIViewController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extension.swift"; sourceTree = "<group>"; };
 		E067D2FE2618C43200F78979 /* LoginModuleAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModuleAssembly.swift; sourceTree = "<group>"; };
-		E067D30A2618C92900F78979 /* Assembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembler.swift; sourceTree = "<group>"; };
+		E067D30A2618C92900F78979 /* MainAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAssembler.swift; sourceTree = "<group>"; };
 		E07212E426173F2A0052AF6B /* MoneyLog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoneyLog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E07212E726173F2A0052AF6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E07212E926173F2A0052AF6B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E07212EB26173F2A0052AF6B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E07212F026173F340052AF6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E07212F326173F340052AF6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E07212F526173F340052AF6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0A15104261B9F4F000B792F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E0A1512F261BA1F4000B792F /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		E0A15133261BA44D000B792F /* ServiceAssemby.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceAssemby.swift; sourceTree = "<group>"; };
 		E0EA9AD92617653C00241EB5 /* LoginrPresenterInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginrPresenterInterface.swift; sourceTree = "<group>"; };
 		E0EA9ADD2617655600241EB5 /* PresenterRouterInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterRouterInterface.swift; sourceTree = "<group>"; };
 		E0EA9AE12617656900241EB5 /* PresenterInteractorInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterInteractorInterface.swift; sourceTree = "<group>"; };
@@ -67,6 +73,8 @@
 		E0EA9B062617701500241EB5 /* InteractorInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorInterface.swift; sourceTree = "<group>"; };
 		E0EA9B092617702600241EB5 /* RouterInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterInterface.swift; sourceTree = "<group>"; };
 		E0EA9B0C2617702F00241EB5 /* ViewInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewInterface.swift; sourceTree = "<group>"; };
+		E0F5E306261C70CF00135411 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E0F5E31F261C78EE00135411 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		FDA4D9CCBDBB0D2A3B03BE3B /* Pods-MoneyLog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneyLog.debug.xcconfig"; path = "Target Support Files/Pods-MoneyLog/Pods-MoneyLog.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,7 +114,8 @@
 			isa = PBXGroup;
 			children = (
 				E067D2FE2618C43200F78979 /* LoginModuleAssembly.swift */,
-				E067D30A2618C92900F78979 /* Assembler.swift */,
+				E0A15133261BA44D000B792F /* ServiceAssemby.swift */,
+				E067D30A2618C92900F78979 /* MainAssembler.swift */,
 			);
 			path = Containers;
 			sourceTree = "<group>";
@@ -132,18 +141,36 @@
 		E07212E626173F2A0052AF6B /* MoneyLog */ = {
 			isa = PBXGroup;
 			children = (
+				E0F5E31E261C78DC00135411 /* Managers */,
+				E0A1512E261BA1D8000B792F /* Services */,
+				E0A15103261B9F43000B792F /* Config */,
 				E067D2FD2618C41F00F78979 /* Containers */,
 				E067D2EE2617A41F00F78979 /* Extensions */,
 				E0EA9AD82617651C00241EB5 /* Commons */,
 				E0EA9AC82617620300241EB5 /* Modules */,
 				E07212E726173F2A0052AF6B /* AppDelegate.swift */,
 				E07212E926173F2A0052AF6B /* SceneDelegate.swift */,
-				E07212EB26173F2A0052AF6B /* ViewController.swift */,
 				E07212F026173F340052AF6B /* Assets.xcassets */,
 				E07212F226173F340052AF6B /* LaunchScreen.storyboard */,
 				E07212F526173F340052AF6B /* Info.plist */,
 			);
 			path = MoneyLog;
+			sourceTree = "<group>";
+		};
+		E0A15103261B9F43000B792F /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				E0A15104261B9F4F000B792F /* GoogleService-Info.plist */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		E0A1512E261BA1D8000B792F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E0F5E304261C70A300135411 /* LoginService */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		E0C724B42617751900193C15 /* ViperLink */ = {
@@ -198,6 +225,31 @@
 				E0EA9B0C2617702F00241EB5 /* ViewInterface.swift */,
 			);
 			path = Viper;
+			sourceTree = "<group>";
+		};
+		E0F5E304261C70A300135411 /* LoginService */ = {
+			isa = PBXGroup;
+			children = (
+				E0F5E305261C70B700135411 /* Model */,
+				E0A1512F261BA1F4000B792F /* LoginService.swift */,
+			);
+			path = LoginService;
+			sourceTree = "<group>";
+		};
+		E0F5E305261C70B700135411 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E0F5E306261C70CF00135411 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E0F5E31E261C78DC00135411 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				E0F5E31F261C78EE00135411 /* UserManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		F9C0379EE81F295B27E66914 /* Frameworks */ = {
@@ -270,6 +322,7 @@
 			files = (
 				E07212F426173F340052AF6B /* LaunchScreen.storyboard in Resources */,
 				E07212F126173F340052AF6B /* Assets.xcassets in Resources */,
+				E0A15105261B9F4F000B792F /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,9 +393,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E07212EC26173F2A0052AF6B /* ViewController.swift in Sources */,
+				E0A15134261BA44D000B792F /* ServiceAssemby.swift in Sources */,
 				E0EA9AE22617656900241EB5 /* PresenterInteractorInterface.swift in Sources */,
 				E067D2F426188D0B00F78979 /* UIViewController+extension.swift in Sources */,
+				E0F5E307261C70CF00135411 /* User.swift in Sources */,
 				E0EA9AFE26176A8800241EB5 /* ModuleInterface.swift in Sources */,
 				E0EA9B072617701500241EB5 /* InteractorInterface.swift in Sources */,
 				E0EA9ADA2617653C00241EB5 /* LoginrPresenterInterface.swift in Sources */,
@@ -354,10 +408,12 @@
 				E0EA9AF1261769DE00241EB5 /* LoginInteractor.swift in Sources */,
 				E07212E826173F2A0052AF6B /* AppDelegate.swift in Sources */,
 				E0EA9ADE2617655600241EB5 /* PresenterRouterInterface.swift in Sources */,
+				E0A15130261BA1F4000B792F /* LoginService.swift in Sources */,
 				E07212EA26173F2A0052AF6B /* SceneDelegate.swift in Sources */,
 				E0EA9AF826176A3500241EB5 /* PresenterViewInterface.swift in Sources */,
+				E0F5E320261C78EE00135411 /* UserManager.swift in Sources */,
 				E0EA9B042617700C00241EB5 /* PresenterInterface.swift in Sources */,
-				E067D30B2618C92900F78979 /* Assembler.swift in Sources */,
+				E067D30B2618C92900F78979 /* MainAssembler.swift in Sources */,
 				E0EA9AF3261769DE00241EB5 /* LoginView.swift in Sources */,
 				E0EA9AF2261769DE00241EB5 /* LoginRouter.swift in Sources */,
 				E0EA9B0A2617702600241EB5 /* RouterInterface.swift in Sources */,
