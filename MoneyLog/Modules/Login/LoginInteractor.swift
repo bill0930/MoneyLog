@@ -22,12 +22,14 @@ final class LoginInteractor: LoginInteractorInterface {
 }
 
 extension LoginInteractor: LoginInteractorPresenterInterface {
-    func login(withEmail email: String, password: String, completion: (Bool) -> Void) {
+    func login(withEmail email: String, password: String, completion: @escaping (Bool) -> Void) {
         loginService.signIn(withEmail: email, password: password) { (user, error) in
             if let user = user {
                 UserManager.shared.loadUser(user: user)
+                completion(true)
             } else {
                 print(error?.localizedDescription)
+                completion(false)
             }
         }
     }

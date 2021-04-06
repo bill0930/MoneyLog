@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import ProgressHUD
 
 protocol LoginPresenterInterface: PresenterInterface {
 }
@@ -49,9 +50,18 @@ extension LoginPresenter: LoginPresenterViewInterface {
         }
     }
 
-    func didClickLoginButton(withEmail email: String, password: String) {
-        interactor.login(withEmail: email, password: password) { (isLogin) in
-            print(isLogin)
+    func didClickLoginButton(withEmail email: String, password: String, button: UIButton) {
+        ProgressHUD.show()
+        button.isEnabled = false
+        button.backgroundColor = UIColor.systemBlue.withAlphaComponent(0.5)
+        interactor.login(withEmail: email, password: password) { (success) in
+            button.isEnabled = true
+            button.backgroundColor = UIColor.systemBlue
+            if success {
+                ProgressHUD.showSuccess()
+            } else {
+                ProgressHUD.showFailed()
+            }
         }
     }
 

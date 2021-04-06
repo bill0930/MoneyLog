@@ -10,6 +10,8 @@ import UIKit
 import SnapKit
 import FontAwesome_swift
 import FirebaseAuth
+import RxSwift
+import RxCocoa
 
 protocol LoginViewInterface: ViewInterface {
 }
@@ -19,6 +21,7 @@ final class LoginView: UIViewController, LoginViewInterface {
     var presenter: LoginPresenterViewInterface!
 
     private var handler: AuthStateDidChangeListenerHandle?
+    private var disposeBag = DisposeBag()
 
     lazy private var container: UIView = {
        let view = UIView()
@@ -107,7 +110,11 @@ final class LoginView: UIViewController, LoginViewInterface {
         button.backgroundColor = .systemBlue
         button.layer.cornerRadius = 4.0
         button.titleLabel?.font = UIFont(name: "Helvetica Neue Bold", size: 12.0)
-        button.addTarget(self, action: #selector(onClickLoginButton), for: .touchUpInside)
+        button.rx.tap.asDriver().debounce(.milliseconds(200)).drive { (_) in
+            self.onClickLoginButton(button)
+        }
+        .disposed(by: disposeBag)
+
         return button
     }()
 
@@ -332,7 +339,7 @@ extension LoginView {
     }
 
     @objc func onClickLoginButton(_ sender: UIButton) {
-        presenter.didClickLoginButton(withEmail: usernameTextField.text!, password: passwordTextField.text!)
+        presenter.didClickLoginButton(withEmail: usernameTextField.text!, password: passwordTextField.text!, button: sender)
     }
 
     @objc func onClickFacebookLoginButton(_ sender: UIButton) {
