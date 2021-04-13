@@ -12,3 +12,6 @@ setup:
 Swift template
 
 https://github.com/BinaryBirds/swift-template
+
+test account: admin@email.com
+password: 12345678
