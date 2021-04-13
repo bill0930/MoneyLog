@@ -13,6 +13,7 @@ struct MainAssembler {
 
     let assembler = Assembler([
         LoginModuleAssembly(),
+        HomeModuleAssembly(),
         ServiceAssembly()
     ])
 }

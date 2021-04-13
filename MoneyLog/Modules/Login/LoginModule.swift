@@ -28,7 +28,7 @@ protocol LoginPresenterViewInterface: PresenterViewInterface {
     func start()
     func didClickEyeButton(passwordTextField: UITextField, eyeButton: UIButton)
     func didClickForgetButton()
-    func didClickLoginButton(withEmail email: String, password: String)
+    func didClickLoginButton(withEmail email: String, password: String, button: UIButton)
     func didClickFacebookLoginButton()
     func didCLickSignupButton()
     func didFindUserLoggedIn()
@@ -37,7 +37,7 @@ protocol LoginPresenterViewInterface: PresenterViewInterface {
 // MARK: - interactor
 
 protocol LoginInteractorPresenterInterface: InteractorPresenterInterface {
-    func login(withEmail email: String, password: String, completion: (Bool) -> Void)
+    func login(withEmail email: String, password: String, completion: @escaping (Bool) -> Void)
     func loginWithFacebook(success: (Bool) -> Void)
     func signup()
 }
